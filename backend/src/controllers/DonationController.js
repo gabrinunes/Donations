@@ -1,4 +1,5 @@
 const connection = require('../database/connection');
+const { update } = require('../database/connection');
 
 
 module.exports ={
@@ -29,28 +30,67 @@ module.exports ={
        const {id}= request.params;
        const user_id = request.headers.authorization
 
-       const incident = await connection('donations')
+       const donation = await connection('donations')
        .where('id',id)
        .select('user_id')
        .first()
 
-       if(incident.user_id != user_id){
+       if(donation.user_id != user_id){
            return response.status(401).json({error:'Operation not permited'})
        }
        await connection('donations').where('id',id).delete();
 
        return response.status(204).send();
     },
+
+    async update(request,response){
+        const{title,description} = request.body;
+
+        const pic = request.file.filename
+
+        const url_id = `http://192.168.0.10:3333/uploads/${pic}`
+
+        const {id}= request.params;
+        const user_id = request.headers.authorization
+
+        const updateDonation = await connection('donations')
+        .where('id',id)
+        .select('user_id')
+        .first()
+
+        const donation = {
+            picture:url_id,
+            title,
+            description,
+            user_id,
+        }
+
+        console.log(updateDonation)
+        console.log(user_id)
+
+        if(updateDonation.user_id != user_id){
+            return response.status(401).json({error:'Operation not permited'})
+        }
+ 
+        await connection('donations').update(donation).where('id',id)
+        
+        return response.status(204).send();
+
+    },
     async create(request,response){
         const{title,description} = request.body;
 
         const pic = request.file.filename
 
+        const url_id = `http://192.168.0.10:3333/uploads/${pic}`
+
+        console.log(url_id)
+
     
         const user_id = request.headers.authorization;
 
         const donation = {
-            picture:pic,
+            picture:url_id,
             title,
             description,
             user_id,

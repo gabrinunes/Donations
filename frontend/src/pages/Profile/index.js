@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from 'react';
 import {Link,useHistory} from 'react-router-dom';
-import {FiPower,FiTrash2} from 'react-icons/fi';
+import {FiPower,FiTrash2,FiPenTool} from 'react-icons/fi';
 
 
 import api from '../../Services/api';
@@ -25,6 +25,7 @@ export default function Profile(){
     },[ongId])
 
 
+
    async function handleDeleteIncident(id){
        try{
          await api.delete(`donations/${id}`,{
@@ -39,6 +40,11 @@ export default function Profile(){
        }
     }
 
+    async function handleUpdateIncident(id){
+        localStorage.setItem('updateID',id)
+        history.push('/incidents/update')
+    }
+
     function handleLogout(){
         localStorage.clear();
 
@@ -49,12 +55,13 @@ export default function Profile(){
         <div className="profile-container">
          <header>
     <span>Bem vindo(a), {ongName}</span>
-
            <Link className="button" to="/incidents/new">Cadastrar nova doação</Link>  
            <button onClick={handleLogout} type="button">
                <FiPower size={18} color="#E02041"/>
            </button>
+
          </header>
+         
 
          <h1>Doações cadastradas</h1>
 
@@ -69,10 +76,15 @@ export default function Profile(){
              <p>{incident.description}</p>
 
              <strong>FOTO:</strong>
-             <img src={incident.image_url} alt=""/>
+             <img src={incident.picture} alt=""/>
+              
 
              <button onClick={() => handleDeleteIncident(incident.id)} type="button">
-              <FiTrash2 size={20} color="#a8a8b3"/>
+              <FiTrash2 size={50} color="#a8a8b3"/>
+             </button>
+
+             <button onClick={() => handleUpdateIncident(incident.id)} type="button">
+              <FiPenTool size={50} color="#a8a8b3"/>
              </button>
          </li>
              ))}

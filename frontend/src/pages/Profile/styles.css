@@ -46,7 +46,7 @@
 
 .profile-container ul{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,2fr);
     grid-gap: 24px;
     list-style: none;
 }
@@ -59,7 +59,6 @@
 }
 
 .profile-container ul li button {
-    position: absolute;
     right: 24px;
     top: 24px;
     border: 0;

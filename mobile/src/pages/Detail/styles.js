@@ -28,6 +28,11 @@ export default StyleSheet.create({
         marginTop:24
     },
 
+    incidentPicture:{
+        width:'100%',
+        height:'50%',
+    }, 
+
     incidentValue: {
         marginTop: 8,
         fontSize:15,

@@ -24,19 +24,36 @@ routes.post('/users', celebrate({
         name: Joi.string().required(),
         email: Joi.string().required().email(),
         cnpj: Joi.string().required(),
-        whatsapp: Joi.string().required().min(10).max(11),
+        whatsapp: Joi.string().required().min(10).max(15),
         city: Joi.string().required(),
         uf: Joi.string().required().length(2)
     })
 }), UserController.create);
 
-routes.post('/donations',upload.single('picture'),DonatioController.create)
+routes.post('/donations',upload.single('picture'),
+celebrate({
+    [Segments.BODY]:Joi.object().keys({
+        title: Joi.string().required(),
+        description: Joi.string().required(),
+    })
+})
+,DonatioController.create)
 
 routes.delete('/donations/:id',celebrate({
     [Segments.PARAMS]: Joi.object().keys({
         id: Joi.number().required()
     })
 }),DonatioController.delete)
+
+
+routes.put('/donations/:id',upload.single('picture'),celebrate({
+    [Segments.BODY]:Joi.object().keys({
+        title: Joi.string().required(),
+        description: Joi.string().required(),
+    })
+})
+,DonatioController.update)
+
 
 routes.get('/donations',celebrate({
     [Segments.QUERY]: Joi.object().keys({

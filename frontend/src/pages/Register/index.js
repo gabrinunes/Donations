@@ -67,7 +67,7 @@ export default function Register(){
               />
               
               <input 
-              placeholder="WhatsApp"
+              placeholder=" Informe seu WhatsApp com 91 na frente"
               value={whatsapp}
               onChange={e=> setWhatsapp(e.target.value)}
               />
