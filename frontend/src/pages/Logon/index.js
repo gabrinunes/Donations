@@ -3,8 +3,6 @@ import {Link,useHistory} from 'react-router-dom'
 import {FiLogIn} from 'react-icons/fi'
 import './styles.css'
 import api from '../../Services/api';
-import heroesImg from'../../assets/heroes.png';
-import logoImg from '../../assets/logo.svg';
 
 export default function Logon(){
     const[cnpj,setCnpj] = useState('')

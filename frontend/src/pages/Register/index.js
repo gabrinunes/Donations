@@ -3,7 +3,6 @@ import {Link,useHistory} from 'react-router-dom'
 import {FiArrowLeft} from 'react-icons/fi'
 import api from '../../Services/api'
 import './styles.css'
-import logoImg from '../../assets/logo.svg';
 
 export default function Register(){
     const [name,setName]=useState('')

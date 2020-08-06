@@ -2,7 +2,6 @@ import React, {useEffect,useState} from 'react';
 import {Link,useHistory} from 'react-router-dom';
 import {FiPower,FiTrash2} from 'react-icons/fi';
 
-import logoImg from '../../assets/logo.svg';
 
 import api from '../../Services/api';
 import './styles.css'
