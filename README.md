@@ -18,6 +18,14 @@ https://www.youtube.com/watch?v=aDIQ56z7kI0
 
 # Frontend
 
+![donations1](https://user-images.githubusercontent.com/26885001/89666851-76132a80-d8b1-11ea-8e33-8b2ee1c9835f.png)
+
+![donations2](https://user-images.githubusercontent.com/26885001/89667032-c5595b00-d8b1-11ea-8719-d88e1295bca6.png)
+
+![donations3](https://user-images.githubusercontent.com/26885001/89667086-e5891a00-d8b1-11ea-84e7-ee8fb127a28e.png)
+
+![donations4](https://user-images.githubusercontent.com/26885001/89667196-1b2e0300-d8b2-11ea-8aaf-f7b73b31ef21.png)
+
 # Mobile
 
 
