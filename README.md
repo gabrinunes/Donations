@@ -27,6 +27,8 @@ https://www.youtube.com/watch?v=aDIQ56z7kI0
 ![donations4](https://user-images.githubusercontent.com/26885001/89667196-1b2e0300-d8b2-11ea-8aaf-f7b73b31ef21.png)
 
 # Mobile
+ A lista contendo as doações e sempre atualizada ao inciar o aplicativo,caso você tenha feito um novo cadastro no Dashboard,
+ será necessário fechar o App e executar denovo para o mesmo ser atulizado com os dados Atuais.
 
 ![WhatsApp Image 2020-08-07 at 13 31 51](https://user-images.githubusercontent.com/26885001/89667686-f5552e00-d8b2-11ea-8f26-268ff992f686.jpeg)
 
