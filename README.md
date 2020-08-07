@@ -16,4 +16,8 @@ para resolver este problema e preciso habilitar a opção no aparelho "Fontes De
 # Caso tenha alguma dúvida,assista esse vídeo onde o procedimento acima e ensinado passo a passo,variando de fabricante para fabricante
 https://www.youtube.com/watch?v=aDIQ56z7kI0
 
+# Frontend
+
+# Mobile
+
 
