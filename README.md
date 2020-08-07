@@ -16,6 +16,10 @@ para resolver este problema e preciso habilitar a opção no aparelho "Fontes De
 # Caso tenha alguma dúvida,assista esse vídeo onde o procedimento acima e ensinado passo a passo,variando de fabricante para fabricante
 https://www.youtube.com/watch?v=aDIQ56z7kI0
 
+# Backend
+ Backend hospedado no Heroku.com,devido a limitações do plano free, a mesma não persiste os dados por mais 24 horas,
+ como se trata de um protótipo a escolha desse plano foi a mais viável.
+
 # Frontend
 
 ![donations1](https://user-images.githubusercontent.com/26885001/89666851-76132a80-d8b1-11ea-8e33-8b2ee1c9835f.png)
