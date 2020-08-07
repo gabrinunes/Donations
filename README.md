@@ -3,5 +3,5 @@
 
 Aplicação fullStack(nodejs,ReactJS,ReactNative(Expo))
 
-# Pagína de Dashboard(cadastro)
+# Página de Dashboard(cadastro)
 https://frontend-donation.herokuapp.com/
